@@ -1,0 +1,2 @@
+# LaravelPlusReactApp
+Laravel + React application 
