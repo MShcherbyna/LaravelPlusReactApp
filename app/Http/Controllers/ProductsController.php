@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
+
 class ProductsController extends Controller
 {
     public function index()
     {
-        return Product::all();
+        return Product::orderBy('id', 'desc')->get();
     }
 
     public function show(Product $product)
@@ -38,9 +39,9 @@ class ProductsController extends Controller
         return response()->json($product, 200);
     }
 
-    public function delete(Product $product)
+    public function delete($productId)
     {
-        $product->delete();
+        Product::find($productId)->delete();
 
         return response()->json(null, 204);
     }

@@ -12,3 +12,12 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+
+.badge.badge-primary.badge-pill {
+    cursor: pointer;
+}
+
+.control-elem span {
+    margin-right: 5px;
+    cursor: pointer;
+}
